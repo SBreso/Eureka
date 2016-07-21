@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CefSharp;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +23,19 @@ namespace WpfApplication1
     {
         public MainWindow()
         {
-            InitializeComponent();
+            InitializeComponent();            
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (!Cef.IsInitialized)
+            {
+                MessageBox.Show("Cef is not initialized");
+                Cef.Initialize(new CefSettings());
+            }
+
+            //this.Browser.LoadHtml("./WLogin.html", "./WLogin.html");
+            this.Browser.Address = "www.google.com";
         }
     }
 }

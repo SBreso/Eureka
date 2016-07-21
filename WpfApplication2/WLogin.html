@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Login</title>
+     <script>
+
+        function closeWindow() {
+            WLogin.closeWindow();
+        }
+
+        function doLogin(email, password) {
+            WLogin.login(email, password);
+        }
+
+        function doLoginWithFb() {
+            WLogin.loginWithFb();
+        }
+
+        function doLoginWithGg() {
+            WLogin.loginWithGg();
+        }
+
+        function createAccount() {
+            WLogin.createAccount();
+        }
+
+        function recoverPassword() {
+            WLogin.recoverPassword();
+        }
+
+        function closeWindow() {
+            WLogin.closeWindow();
+        }
+
+        function minimizeWindow() {
+            WLogin.minimizeWindow();
+        }
+
+        function maximizeWindow() {
+            WLogin.maximizeWindow();
+        }
+
+        function normalWindow() {
+            WLogin.normalizeWindow();
+        }
+
+    </script>
+</head>
+<body style="background-color:darkgoldenrod">
+    <div>
+
+        <h1>Login</h1>         
+
+    </div>
+
+    <div>        
+       
+        <input id="email" type="email" />
+
+        <input id="password" type="password" />
+
+        <input id="loginTX" type="button" value="Login Texyon" 
+        onclick="doLogin(document.getElementById('email').value,document.getElementById('password').value)" />
+
+        <input type="button" value="Facebook" onclick="doLoginWithFb()"/>
+
+        <input type="button" value="Google" onclick="doLoginWithGg()"/>
+           
+    </div>
+
+    <div>
+
+        <input type="button" value="Close" onclick="closeWindow()"/>
+
+        <input type="button" value="Min" onclick="minimizeWindow()" />
+
+        <input type="button" value="Max" onclick="maximizeWindow()" />
+
+        <input type="button" value="Normal" onclick="normalWindow()" />
+
+    </div>
+
+</body>
+</html>
